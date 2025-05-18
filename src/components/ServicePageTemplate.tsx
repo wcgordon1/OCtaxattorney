@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 import SeoMeta from './SeoMeta';
 import { useEffect } from 'react';
+import DisclaimerBanner from './DisclaimerBanner';
 
 interface ServicePageProps {
   title: string;
@@ -33,6 +34,7 @@ export default function ServicePageTemplate({
   return (
     <div className="font-sans text-dark-brown">
       <Navbar />
+      <DisclaimerBanner />
       <div className="h-[72px]"></div>
       
       {/* Hero Section */}

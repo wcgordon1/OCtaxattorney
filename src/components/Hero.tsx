@@ -4,8 +4,8 @@ import { Link } from 'react-scroll';
 export default function Hero() {
   return (
     <section id="hero" className="relative pt-20 md:pt-24 lg:pt-28 hero-pattern">
-      <div className="container mx-auto px-4 py-20 md:py-32">
-        <div className="flex flex-col md:flex-row items-center">
+      <div className="container mx-auto px-4 py-10 md:py-32">
+        <div className="flex flex-col md:flex-row items-start md:items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-dark-brown mb-4">
               Orange County <span className="text-dark-orange">Tax Attorney</span>
@@ -37,7 +37,7 @@ export default function Hero() {
             </div>
           </div>
           <div className="md:w-1/2 relative">
-            <div className="rounded-lg overflow-hidden shadow-xl relative h-[400px] md:h-[500px] bg-gradient-to-br from-dark-orange/20 to-cream border border-yellow-orange/20">
+            <div className="rounded-lg overflow-hidden shadow-xl relative md:h-[500px] bg-gradient-to-br from-dark-orange/20 to-cream border-0 md:border md:border-yellow-orange/20">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="w-20 h-20 rounded-full bg-dark-orange mx-auto mb-4 flex items-center justify-center">
@@ -50,7 +50,7 @@ export default function Hero() {
                   <div className="mt-6 flex flex-col gap-3">
                     {['IRS Settlements', 'Tax Liens Removed', 'Penalties Waived'].map((item) => (
                       <div key={item} className="flex items-center bg-white/80 p-3 rounded-md">
-                        <div className="w-4 h-4 rounded-full bg-dark-orange mr-3"></div>
+                        <div className="w-4 h-4 rounded-full bg-dark-orange mr-3" />
                         <span className="font-medium text-dark-brown">{item}</span>
                       </div>
                     ))}

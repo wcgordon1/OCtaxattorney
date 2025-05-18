@@ -51,14 +51,14 @@ export default function LocationsHub() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {locationData.map((location) => (
-              <div 
+              <Link
                 key={location.id}
+                to={`/locations/${location.id}`}
                 className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group cursor-pointer"
-                onClick={() => navigateToLocation(location.id)}
               >
                 <div 
                   className="h-48 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${location.heroImage})` }}
+                  style={{ backgroundImage: location.heroImage ? `url(${location.heroImage})` : 'linear-gradient(to bottom right, #f5f5f5, #e0e0e0)' }}
                 >
                   <div className="w-full h-full bg-dark-brown/30 flex items-center justify-center transition-all group-hover:bg-dark-brown/20">
                     <h2 className="text-white text-3xl font-serif font-bold drop-shadow-lg">{location.name}</h2>
@@ -99,18 +99,16 @@ export default function LocationsHub() {
                       <span className="text-dark-brown/60 text-sm">Population</span>
                       <p className="text-dark-brown font-medium">{location.population}</p>
                     </div>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        navigateToLocation(location.id);
-                      }}
+                    <Link
+                      to={`/locations/${location.id}`}
                       className="flex items-center text-dark-orange hover:text-dark-orange/80 font-medium transition-colors"
+                      onClick={e => e.stopPropagation()}
                     >
                       View Details <ArrowRight size={16} className="ml-1" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
           
@@ -140,20 +138,27 @@ export default function LocationsHub() {
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {['IRS Audit Defense', 'Tax Debt Resolution', 'Tax Lien & Levy Relief', 
-              'Business Tax Issues', 'Tax Planning', 'Tax Court Representation'].map((service, index) => (
-              <div 
-                key={index}
+            {[
+              { title: 'IRS Audit Defense', url: '/services/irs-audit-defense' },
+              { title: 'Tax Debt Resolution', url: '/services/tax-debt-resolution' },
+              { title: 'Tax Lien & Levy Relief', url: '/services/tax-lien-levy' },
+              { title: 'Business Tax Issues', url: '/services/business-tax' },
+              { title: 'Tax Planning', url: '/services/tax-planning' },
+              { title: 'Tax Court Representation', url: '/services/tax-court' },
+            ].map((service) => (
+              <Link
+                key={service.title}
+                to={service.url}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all border-l-4 border-dark-orange"
               >
-                <h3 className="text-xl font-serif font-bold text-dark-brown mb-2">{service}</h3>
+                <h3 className="text-xl font-serif font-bold text-dark-brown mb-2">{service.title}</h3>
                 <p className="text-dark-brown/80 mb-4">
-                  Our {service.toLowerCase()} services are available to clients in all Orange County locations.
+                  Our {service.title.toLowerCase()} services are available to clients in all Orange County locations.
                 </p>
-                <Link to="/#services" className="text-dark-orange hover:text-dark-orange/80 font-medium flex items-center">
+                <span className="text-dark-orange hover:text-dark-orange/80 font-medium flex items-center">
                   Learn More <ArrowRight size={16} className="ml-1" />
-                </Link>
-              </div>
+                </span>
+              </Link>
             ))}
           </div>
         </div>

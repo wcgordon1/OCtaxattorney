@@ -22,7 +22,7 @@ export const locationData: LocationData[] = [
     taxInfo: 'Irvine residents often face high property tax assessments due to elevated home values. The city\'s business tax structure affects many of the technology and biomedical companies headquartered here.',
     keyIndustries: ['Technology', 'Higher Education', 'Healthcare', 'Research & Development', 'Medical Devices'],
     commonTaxIssues: ['Stock option taxation', 'Property tax assessments', 'Corporate tax compliance', 'R&D tax credits', 'International tax concerns'],
-    heroImage: 'https://images.unsplash.com/photo-1551281812-d0c8a3f8c778?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80'
   },
   {
     id: 'newport-beach',
@@ -34,7 +34,7 @@ export const locationData: LocationData[] = [
     taxInfo: 'Newport Beach has one of the highest concentrations of wealth in Orange County, leading to complex estate planning and capital gains tax issues. Many residents own multiple properties and investment portfolios requiring specialized tax expertise.',
     keyIndustries: ['Real Estate', 'Wealth Management', 'Luxury Retail', 'Tourism', 'Yacht Management'],
     commonTaxIssues: ['Estate and gift tax planning', 'Investment income taxation', 'Luxury property assessments', 'Foreign account compliance', 'Passive income structures'],
-    heroImage: 'https://images.unsplash.com/photo-1558985950-2aa1ba8e2e2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
+    heroImage: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80'
   },
   {
     id: 'santa-ana',

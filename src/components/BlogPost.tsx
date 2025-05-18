@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import DisclaimerBanner from './DisclaimerBanner';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
+import SeoMeta from './SeoMeta';
 
 // Import blog posts data (this would typically come from an API)
 import { blogPosts } from './Blog';
@@ -26,7 +27,7 @@ export default function BlogPost() {
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [slug]);
+  }, []);
   
   // If post not found, redirect to blog page
   useEffect(() => {
@@ -51,7 +52,7 @@ export default function BlogPost() {
         return {
           id,
           text: heading.textContent || '',
-          level: parseInt(heading.tagName.substring(1)) // Get heading level (2 for h2, 3 for h3, etc.)
+          level: Number.parseInt(heading.tagName.substring(1)) // Get heading level (2 for h2, 3 for h3, etc.)
         };
       });
       
@@ -88,7 +89,7 @@ export default function BlogPost() {
       <SeoMeta
         title={`${post.title} | Orange County Tax Attorney Blog`}
         description={post.excerpt}
-        keywords={post.tags.join(', ') + ', Orange County, California tax law'}
+        keywords={`${post.tags.join(', ')}, Orange County, California tax law`}
         canonicalUrl={`https://orangecountytaxattorney.com/blog/${post.slug}`}
         ogImage={post.image}
         breadcrumbs={[
@@ -106,7 +107,8 @@ export default function BlogPost() {
           "dateModified": new Date(post.date).toISOString(),
           "author": {
             "@type": "Person",
-            "name": post.author
+            "name": post.author,
+            "url": "https://orangecountytaxattorney.com/about"
           },
           "publisher": {
             "@type": "Organization",
@@ -114,27 +116,89 @@ export default function BlogPost() {
             "logo": {
               "@type": "ImageObject",
               "url": "https://mocha-cdn.com/og.png"
-            }
+            },
+            "url": "https://orangecountytaxattorney.com"
           },
           "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": `https://orangecountytaxattorney.com/blog/${post.slug}`
           },
           "articleBody": post.content.replace(/<[^>]*>/g, ''),
-          "keywords": post.tags.join(", ")
+          "keywords": post.tags.join(", "),
+          "wordCount": wordCount,
+          "timeRequired": `PT${readingTime}M`,
+          "articleSection": post.category,
+          "inLanguage": "en-US",
+          "isAccessibleForFree": true,
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["article h2", "article h3", "article p"]
+          }
         }}
       />
+      
+      <Helmet>
+        <style>
+          {`
+            .prose h2 {
+              font-size: 2.5rem !important;
+              font-weight: 700 !important;
+              margin-top: 2.5rem !important;
+              margin-bottom: 1.5rem !important;
+              color: #1a1a1a !important;
+              line-height: 1.2 !important;
+              font-family: serif !important;
+            }
+            .prose h3 {
+              font-size: 1.875rem !important;
+              font-weight: 600 !important;
+              margin-top: 2rem !important;
+              margin-bottom: 1rem !important;
+              color: #2a2a2a !important;
+              line-height: 1.3 !important;
+              font-family: serif !important;
+            }
+            .prose h4 {
+              font-size: 1.5rem !important;
+              font-weight: 600 !important;
+              margin-top: 1.75rem !important;
+              margin-bottom: 0.75rem !important;
+              color: #2a2a2a !important;
+              line-height: 1.4 !important;
+              font-family: serif !important;
+            }
+            .prose p {
+              font-size: 1.125rem !important;
+              line-height: 1.7 !important;
+              margin-bottom: 1.5rem !important;
+              color: #333 !important;
+            }
+            .prose ul, .prose ol {
+              margin: 1.5rem 0 !important;
+              padding-left: 2rem !important;
+            }
+            .prose li {
+              margin-bottom: 0.75rem !important;
+              font-size: 1.125rem !important;
+              line-height: 1.7 !important;
+            }
+            .prose strong {
+              font-weight: 600 !important;
+            }
+          `}
+        </style>
+      </Helmet>
       
       <Navbar />
       <DisclaimerBanner />
       
       {/* Hero Section */}
       <section className="pt-32 relative">
-        <div className="absolute inset-0 bg-dark-brown/70 z-0"></div>
+        <div className="absolute inset-0 bg-dark-brown/70 z-0" />
         <div 
           className="absolute inset-0 bg-cover bg-center z-[-1]" 
           style={{ backgroundImage: `url(${post.image})` }}
-        ></div>
+        />
         
         <div className="container mx-auto px-4 py-20 relative z-10">
           <Link to="/blog" className="inline-flex items-center text-white/90 hover:text-yellow-orange mb-6 transition-colors">
@@ -182,22 +246,31 @@ export default function BlogPost() {
                 <h2 className="text-xl font-serif font-bold text-dark-brown mb-4">Table of Contents</h2>
                 <ul className="space-y-2">
                   {tableOfContents.map((item) => (
-                    <li 
-                      key={item.id}
-                      className="cursor-pointer hover:text-dark-orange transition-colors"
-                      style={{ marginLeft: `${(item.level - 2) * 20}px` }}
-                      onClick={() => scrollToHeading(item.id)}
-                    >
-                      <span className="border-b border-dark-brown/20 hover:border-dark-orange pb-1">
-                        {item.text}
-                      </span>
+                    <li key={item.id}>
+                      <button
+                        type="button"
+                        className="w-full text-left cursor-pointer hover:text-dark-orange transition-colors"
+                        style={{ marginLeft: `${(item.level - 2) * 20}px` }}
+                        onClick={() => scrollToHeading(item.id)}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            scrollToHeading(item.id);
+                          }
+                        }}
+                      >
+                        <span className="border-b border-dark-brown/20 hover:border-dark-orange pb-1">
+                          {item.text}
+                        </span>
+                      </button>
                     </li>
                   ))}
                 </ul>
               </div>
             )}
             
-            <article className="prose prose-lg prose-headings:font-serif prose-headings:text-dark-brown prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-3 prose-p:text-dark-brown/80 prose-p:my-4 prose-a:text-dark-orange prose-a:no-underline hover:prose-a:underline prose-strong:text-dark-brown prose-strong:font-semibold prose-ul:my-4 prose-ul:pl-5 prose-li:my-2 prose-ol:my-4 prose-ol:pl-5 max-w-none">
+            <article className="prose prose-lg prose-headings:font-serif prose-headings:text-dark-brown prose-h2:text-4xl prose-h2:font-bold prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:font-semibold prose-h3:mt-10 prose-h3:mb-4 prose-p:text-dark-brown/80 prose-p:my-4 prose-a:text-dark-orange prose-a:no-underline hover:prose-a:underline prose-strong:text-dark-brown prose-strong:font-semibold prose-ul:my-4 prose-ul:pl-5 prose-li:my-2 prose-ol:my-4 prose-ol:pl-5 max-w-none">
+              {/* Using a div with dangerouslySetInnerHTML is necessary here as we're rendering HTML content from our CMS */}
+              {/* eslint-disable-next-line react/no-danger */}
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </article>
             
