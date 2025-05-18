@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Playfair Display', 'Montserrat', system-ui, sans-serif;
+  --color-dark-orange: #D35400;
+  --color-yellow-orange: #F39C12;
+  --color-cream: #FEF5E7;
+  --color-dark-brown: #5D4037;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+  
+  p, a, li, span {
+    @apply font-sans;
+  }
+}
+
+.hero-pattern {
+  background-color: var(--color-cream);
+  background-image: radial-gradient(rgba(243, 156, 18, 0.1) 2px, transparent 2px);
+  background-size: 30px 30px;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold mb-4 text-dark-brown relative inline-block;
+}
+
+.section-title::after {
+  content: '';
+  @apply block w-1/2 h-1 bg-dark-orange mt-2;
+}
+
+.btn-primary {
+  @apply bg-dark-orange hover:bg-dark-orange/90 text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 shadow-md hover:shadow-lg hover:translate-y-[-2px];
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-cream text-dark-orange font-semibold py-3 px-6 rounded-md border-2 border-dark-orange transition-all duration-300 hover:translate-y-[-2px];
+}
+
+.card {
+  @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-3px];
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.service-card {
+  @apply card border-l-4 border-yellow-orange hover:border-dark-orange;
+}
+
+.testimonial-card {
+  @apply card border-t-4 border-dark-orange;
+}
+
+.active-nav-link {
+  @apply text-dark-orange relative font-medium;
+}
+
+.active-nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-full h-0.5 bg-dark-orange;
+}

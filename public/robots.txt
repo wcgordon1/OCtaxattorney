@@ -1,0 +1,6 @@
+# robots.txt for orangecountytaxattorney.com
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://orangecountytaxattorney.com/sitemap.xml
