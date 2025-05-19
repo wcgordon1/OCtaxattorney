@@ -1,5 +1,5 @@
 import { ArrowRight, Map, MapPin, Navigation } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { locationData } from '../data/locationData';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -7,8 +7,6 @@ import DisclaimerBanner from './DisclaimerBanner';
 import { useEffect } from 'react';
 
 export default function LocationsHub() {
-  const navigate = useNavigate();
-  
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);

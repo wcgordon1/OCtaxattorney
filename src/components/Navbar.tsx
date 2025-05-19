@@ -20,7 +20,6 @@ const NavLink = ({ to, label, onClick = () => {} }: { to: string; label: string;
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   
   // Adjust body padding for banner
   useEffect(() => {
@@ -37,15 +36,6 @@ export default function Navbar() {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   useEffect(() => {
     // Prevent scrolling when menu is open

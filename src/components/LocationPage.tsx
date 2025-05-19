@@ -1,8 +1,7 @@
-import { MapPin } from 'lucide-react';
+import { MapPin, ChevronRight } from 'lucide-react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { locationData, serviceData } from '../data/locationData';
 import Footer from './Footer';
-import DisclaimerBanner from './DisclaimerBanner';
 import SeoMeta from './SeoMeta';
 import { useEffect } from 'react';
 import Navbar from './Navbar';

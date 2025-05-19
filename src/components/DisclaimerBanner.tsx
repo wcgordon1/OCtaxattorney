@@ -1,6 +1,5 @@
-import { X } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
 import { CircleAlert } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export default function DisclaimerBanner() {
   const [topPosition, setTopPosition] = useState(72);
