@@ -15,7 +15,7 @@ This repository showcases a demo website built for the premium legal domain `Ora
 
 ---
 
-## 🌐 Live Demo
+## 🌐 Live Website (Not a real law firm)
 
 Check out the live demo site:  
 [https://orangecountytaxattorney.com](https://orangecountytaxattorney.com)
