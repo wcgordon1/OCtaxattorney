@@ -576,6 +576,7 @@ export default function Blog() {
       <Helmet>
         <title>Blog | Orange County Tax Attorney</title>
         <meta name="description" content="Expert insights on tax law, IRS defense, and tax planning strategies for Orange County residents and businesses." />
+        <meta property="og:image" content="/octax.png" />
         <style>
           {`
             .blog-content h2 {

@@ -16,7 +16,7 @@ export default function SeoMeta({
   description,
   keywords = "Orange County tax attorney, tax resolution, IRS audit defense, tax debt relief, California tax law, Orange County",
   canonicalUrl = "https://orangecountytaxattorney.com",
-  ogImage = "https://mocha-cdn.com/og.png",
+  ogImage = "/octax.png",
   breadcrumbs,
   schemaData
 }: SeoMetaProps) {
@@ -122,14 +122,14 @@ export default function SeoMeta({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content="/octax.png" />
       
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={canonicalUrl} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={ogImage} />
+      <meta property="twitter:image" content="/octax.png" />
       
       {/* Geo Tags */}
       <meta name="geo.region" content="US-CA" />

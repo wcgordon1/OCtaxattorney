@@ -7,8 +7,8 @@ export default function Contact() {
         <div className="text-center mb-16">
           <h2 className="section-title mx-auto">Contact Us</h2>
           <p className="text-dark-brown/80 max-w-2xl mx-auto">
-            Ready to resolve your tax issues? Schedule a confidential consultation with our experienced tax attorneys.
-          </p>
+          Spending thousands on Google Ads? Stop. This domain name is for sale and ranks at the top of Google. 35K and you own it for life. Want to customize the website? Send us an email.
+      </p>
         </div>
         
         <div className="flex flex-col lg:flex-row gap-12">
@@ -29,7 +29,7 @@ export default function Contact() {
                   <Mail className="text-dark-orange mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-dark-brown">Email</h4>
-                    <p className="text-dark-brown/80">sales@orangecountytaxattorney.com</p>
+                    <a href="mailto:sales@orangecountytaxattorney.com" className="text-blue-500 hover:text-blue-700 underline">sales@orangecountytaxattorney.com</a>
                   </div>
                 </div>
                 
@@ -58,11 +58,9 @@ export default function Contact() {
               </div>
               
               <div className="p-4 bg-dark-brown/5 rounded-md">
-                <h4 className="font-semibold text-dark-brown mb-2">Service Areas</h4>
+                <h4 className="font-semibold text-dark-brown mb-2">Buy This Domain Name</h4>
                 <p className="text-dark-brown/80 text-sm">
-                  We serve clients throughout Orange County, including Anaheim, Costa Mesa, Dana Point, Fullerton, 
-                  Huntington Beach, Irvine, Laguna Beach, Mission Viejo, Newport Beach, Orange, San Clemente, 
-                  Santa Ana, and Yorba Linda.
+                  We rank on Google. We did all of the hard work for you. My name is Will and I live in Newport Beach. Happy to meet you in person. Send me an email and let's talk. 
                 </p>
               </div>
             </div>

@@ -72,6 +72,7 @@ export default function FAQ() {
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
+        <meta property="og:image" content="/octax.png" />
       </Helmet>
 
       <div className="container mx-auto px-4">

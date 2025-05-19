@@ -48,6 +48,7 @@ export default function BusinessTax() {
         <meta property="og:description" content="Expert business tax resolution services in Orange County. Our tax attorneys help resolve payroll tax problems, sales tax audits, and business income tax disputes." />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="/octax.png" />
       </Helmet>
       <ServicePageTemplate {...pageData} />
     </>

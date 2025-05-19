@@ -146,17 +146,27 @@ export default function Footer() {
             &copy; {currentYear} Orange County Tax Attorney. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-white/60 hover:text-yellow-orange text-sm transition-colors">
+            <a href="/privacy-policy" className="text-white/60 hover:text-yellow-orange text-sm transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-white/60 hover:text-yellow-orange text-sm transition-colors">
+            <a href="/terms-of-service" className="text-white/60 hover:text-yellow-orange text-sm transition-colors">
               Terms of Service
             </a>
-            <a href="#" className="text-white/60 hover:text-yellow-orange text-sm transition-colors">
+            <a href="/sitemap.xml" className="text-white/60 hover:text-yellow-orange text-sm transition-colors">
               Sitemap
             </a>
           </div>
         </div>
+      </div>
+      <div className="w-full flex justify-center mt-6">
+        <a
+          href="https://www.irvinetaxlawyer.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-yellow-orange font-serif font-semibold text-base underline hover:text-white transition-colors"
+        >
+          Part of Irvine Tax Lawyer
+        </a>
       </div>
     </footer>
   );

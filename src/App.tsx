@@ -23,6 +23,8 @@ import TaxPlanning from './pages/TaxPlanning';
 import TaxCourt from './pages/TaxCourt';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 export function App() {
   useEffect(() => {
@@ -76,6 +78,8 @@ export function App() {
           {/* Blog Routes */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
         </Routes>
       </Router>
     </HelmetProvider>

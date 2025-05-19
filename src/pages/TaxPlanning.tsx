@@ -48,6 +48,7 @@ export default function TaxPlanning() {
         <meta property="og:description" content="Strategic tax planning services in Orange County. Our tax attorneys help individuals and businesses legally minimize tax liability through proactive planning." />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="/octax.png" />
       </Helmet>
       <ServicePageTemplate {...pageData} />
     </>

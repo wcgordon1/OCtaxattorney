@@ -186,6 +186,7 @@ export default function BlogPost() {
             }
           `}
         </style>
+        <meta property="og:image" content="/octax.png" />
       </Helmet>
       
       <Navbar />

@@ -48,6 +48,7 @@ export default function TaxDebtResolution() {
         <meta property="og:description" content="Expert tax debt resolution services in Orange County. Our tax attorneys help resolve IRS and state tax debt through Offers in Compromise, Installment Agreements, and more." />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="/octax.png" />
       </Helmet>
       <ServicePageTemplate {...pageData} />
     </>

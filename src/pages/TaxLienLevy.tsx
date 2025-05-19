@@ -48,6 +48,7 @@ export default function TaxLienLevy() {
         <meta property="og:description" content="Expert tax lien and levy relief services in Orange County. Our tax attorneys help remove IRS liens, stop wage garnishments, and prevent bank account levies." />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="/octax.png" />
       </Helmet>
       <ServicePageTemplate {...pageData} />
     </>

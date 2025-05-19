@@ -42,12 +42,13 @@ export default function TaxCourt() {
     <>
       <Helmet>
         <title>Tax Court Representation in Orange County | Tax Attorney Services</title>
-        <meta name="description" content="Expert Tax Court representation in Orange County. Our tax attorneys provide skilled litigation and negotiation services for taxpayers challenging IRS determinations." />
+        <meta name="description" content="Expert Orange county Tax Court representation in Orange County. Our tax attorneys provide skilled litigation and negotiation services for taxpayers challenging IRS determinations." />
         <meta name="keywords" content="Tax Court representation, Orange County tax litigation, IRS dispute, Tax Court petition, tax case, tax trial, Orange County tax attorney" />
         <meta property="og:title" content="Tax Court Representation in Orange County | Tax Attorney Services" />
         <meta property="og:description" content="Expert Tax Court representation in Orange County. Our tax attorneys provide skilled litigation and negotiation services for taxpayers challenging IRS determinations." />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="/octax.png" />
       </Helmet>
       <ServicePageTemplate {...pageData} />
     </>

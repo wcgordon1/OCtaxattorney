@@ -101,6 +101,11 @@ export default function Services() {
       <Helmet>
         <title>Tax Services | Orange County Tax Attorney</title>
         <meta name="description" content="Comprehensive tax services for Orange County residents and businesses, including IRS audit defense, tax debt resolution, and tax planning." />
+        <meta property="og:title" content="Tax Services | Orange County Tax Attorney" />
+        <meta property="og:description" content="Comprehensive tax services for Orange County residents and businesses, including IRS audit defense, tax debt resolution, and tax planning." />
+        <meta property="og:image" content="/octax.png" />
+        <meta property="og:url" content="https://orangecountytaxattorney.com/services" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       {/* Hero Section */}
