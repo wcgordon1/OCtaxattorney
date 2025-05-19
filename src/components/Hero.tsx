@@ -11,7 +11,7 @@ export default function Hero() {
               Orange County <span className="text-dark-orange">Tax Attorney</span>
             </h1>
             <p className="text-lg md:text-xl text-dark-brown/80 mb-8 max-w-xl">
-              Facing tax problems? Our specialized attorneys have helped hundreds of Orange County residents and businesses resolve complex tax issues with the IRS and state.
+              Facing tax problems? Our specialized attorneys have helped hundreds of Orange County residents and businesses resolve complex tax issues with the IRS and state. This domain name is for sale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="contact" smooth={true} duration={500} className="btn-primary flex items-center justify-center whitespace-nowrap">
@@ -45,7 +45,7 @@ export default function Hero() {
                   </div>
                   <h3 className="text-2xl font-serif font-bold text-dark-brown mb-2">Success Rate</h3>
                   <p className="text-dark-brown/80">
-                    Our tax resolution specialists have successfully resolved 95% of cases with significant savings for our clients.
+                    Our tax resolution specialists have successfully resolved 95% of cases with significant savings for our clients. 
                   </p>
                   <div className="mt-6 flex flex-col gap-3">
                     {['IRS Settlements', 'Tax Liens Removed', 'Penalties Waived'].map((item) => (
