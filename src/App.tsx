@@ -43,20 +43,25 @@ export function App() {
       <Router>
       <Routes>
         <Route path="/" element={
-          <div className="font-sans text-dark-brown">
-            <Navbar />
-            <DisclaimerBanner />
-            <Hero />
-            <Services />
-            <LocationLinks />
-            <About />
-            <Process />
-            <Benefits />
-            <Testimonials />
-            <FAQ />
-            <Contact />
-            <Footer />
-          </div>
+          <>
+            <header style={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 50 }}>
+              <Navbar />
+              <DisclaimerBanner />
+            </header>
+            <div style={{ height: '112px' }} />
+            <div className="font-sans text-dark-brown">
+              <Hero />
+              <Services />
+              <LocationLinks />
+              <About />
+              <Process />
+              <Benefits />
+              <Testimonials />
+              <FAQ />
+              <Contact />
+              <Footer />
+            </div>
+          </>
         } />
         <Route path="/locations" element={<LocationsHub />} />
         <Route path="/locations/:locationId" element={<LocationPage />} />

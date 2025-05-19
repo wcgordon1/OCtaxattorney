@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import DisclaimerBanner from './DisclaimerBanner';
 import { Helmet } from 'react-helmet';
 
 // Blog post data structure
@@ -616,8 +615,6 @@ export default function Blog() {
       </Helmet>
 
       <Navbar />
-      <DisclaimerBanner />
-
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-dark-brown text-white">
         <div className="container mx-auto px-4">

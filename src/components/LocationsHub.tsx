@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { locationData } from '../data/locationData';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import DisclaimerBanner from './DisclaimerBanner';
 import { useEffect } from 'react';
 
 export default function LocationsHub() {
@@ -15,7 +14,6 @@ export default function LocationsHub() {
   return (
     <div className="font-sans text-dark-brown">
       <Navbar />
-      <DisclaimerBanner />
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-cream relative overflow-hidden">

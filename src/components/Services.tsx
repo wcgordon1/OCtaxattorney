@@ -2,7 +2,6 @@ import { ArrowRight, Briefcase, CheckCircle, ChevronRight, FileText, Gavel, Scal
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import DisclaimerBanner from './DisclaimerBanner';
 import { Helmet } from 'react-helmet';
 import { useEffect } from 'react';
 
@@ -107,7 +106,6 @@ export default function Services() {
       </Helmet>
 
       <Navbar />
-      <DisclaimerBanner />
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-cream relative overflow-hidden">

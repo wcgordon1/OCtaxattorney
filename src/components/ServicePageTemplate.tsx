@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import { useEffect } from 'react';
-import DisclaimerBanner from './DisclaimerBanner';
 
 interface ServicePageProps {
   title: string;
@@ -33,7 +32,6 @@ export default function ServicePageTemplate({
   return (
     <div className="font-sans text-dark-brown">
       <Navbar />
-      <DisclaimerBanner />
       <div className="h-[72px]"></div>
       
       {/* Hero Section */}

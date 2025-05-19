@@ -3,7 +3,6 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import DisclaimerBanner from './DisclaimerBanner';
 import { Helmet } from 'react-helmet-async';
 import SeoMeta from './SeoMeta';
 
@@ -190,7 +189,6 @@ export default function BlogPost() {
       </Helmet>
       
       <Navbar />
-      <DisclaimerBanner />
       
       {/* Hero Section */}
       <section className="pt-32 relative">

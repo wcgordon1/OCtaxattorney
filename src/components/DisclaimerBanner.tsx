@@ -1,36 +1,29 @@
 import { CircleAlert } from 'lucide-react';
-import { useEffect, useState } from 'react';
 
 export default function DisclaimerBanner() {
-  const [topPosition, setTopPosition] = useState(72);
-
-  useEffect(() => {
-    const updatePosition = () => {
-      const navbar = document.querySelector('nav');
-      if (navbar) {
-        const navbarHeight = navbar.offsetHeight;
-        setTopPosition(navbarHeight);
-      }
-    };
-
-    // Initial calculation
-    updatePosition();
-
-    // Update on window resize
-    window.addEventListener('resize', updatePosition);
-    return () => window.removeEventListener('resize', updatePosition);
-  }, []);
-
   return (
     <div 
-      className="bg-dark-orange text-white border-b border-dark-orange/20 py-3 text-center text-sm font-medium fixed w-full z-30" 
-      style={{ top: `${topPosition}px` }}
+      style={{ 
+        width: '100%',
+        backgroundColor: '#C2410C', // dark-orange
+        color: 'white',
+        padding: '0.75rem',
+        textAlign: 'center',
+        borderBottom: '1px solid rgba(194, 65, 12, 0.2)'
+      }}
     >
-      <div className="container mx-auto px-4 flex items-center justify-center">
-        <CircleAlert size={16} className="text-white mr-2" />
-        <p>
+      <div style={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center',
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '0 1rem'
+      }}>
+        <CircleAlert size={16} style={{ marginRight: '0.5rem', flexShrink: 0 }} />
+        <span style={{ fontSize: '0.875rem', fontWeight: 500 }}>
           This is a demo website. Not a real law firm. No legal advice provided.
-        </p>
+        </span>
       </div>
     </div>
   );
