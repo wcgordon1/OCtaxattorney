@@ -116,7 +116,7 @@ export default function ServicePageTemplate({
             </div>
             
             <div className="lg:w-1/3">
-              <div className="bg-cream p-6 rounded-lg shadow-md sticky top-24">
+              <div className="bg-cream p-6 rounded-lg shadow-md sticky top-40">
                 <h3 className="text-xl font-serif font-bold text-dark-brown mb-4">Key Benefits</h3>
                 <ul className="space-y-3 mb-8">
                   {benefits.slice(0, 3).map((benefit, index) => (

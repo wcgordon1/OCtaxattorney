@@ -60,9 +60,9 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-white/90 backdrop-blur-sm py-4'}`} style={{ top: '0' }}>
+    <nav className="fixed w-full z-50 bg-white shadow-md py-2" style={{ top: '0' }}>
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <RouterLink to="/" className="text-dark-brown font-serif font-bold text-xl md:text-2xl">
@@ -119,7 +119,9 @@ export default function Navbar() {
               </button>
             </div>
             <div className="flex flex-col text-dark-brown space-y-2">
-              <NavLink to="services" label="Services" onClick={closeMenu} />
+              <RouterLink to="/services" className="text-xl py-4 border-b border-cream/50 cursor-pointer hover:text-dark-orange transition-colors" onClick={closeMenu}>
+                Services
+              </RouterLink>
               <NavLink to="about" label="About Us" onClick={closeMenu} />
               <NavLink to="process" label="Our Process" onClick={closeMenu} />
               <RouterLink to="/locations" className="text-xl py-4 border-b border-cream/50 cursor-pointer hover:text-dark-orange transition-colors" onClick={closeMenu}>

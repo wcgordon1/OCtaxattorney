@@ -29,7 +29,7 @@ export default function DisclaimerBanner() {
       <div className="container mx-auto px-4 flex items-center justify-center">
         <CircleAlert size={16} className="text-white mr-2" />
         <p>
-          This is a demo website for display purposes only. Not a real law firm. No legal advice provided.
+          This is a demo website. Not a real law firm. No legal advice provided.
         </p>
       </div>
     </div>

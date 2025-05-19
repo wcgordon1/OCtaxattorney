@@ -62,7 +62,7 @@ export default function Process() {
           {steps.map((step, index) => (
             <div key={index} className="flex flex-col md:flex-row items-start gap-6">
               <div className="md:w-1/5 flex flex-col items-center md:items-start">
-                <div className="w-16 h-16 rounded-full bg-dark-orange flex items-center justify-center mb-4">
+                <div className="w-16 h-12 rounded-full bg-dark-orange flex items-center justify-center mb-4">
                   <span className="text-white text-2xl font-bold">{step.number}</span>
                 </div>
                 <h3 className="text-xl font-serif font-bold text-dark-brown text-center md:text-left">{step.title}</h3>

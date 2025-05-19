@@ -34,9 +34,9 @@ export default function Footer() {
             <h4 className="text-lg font-serif font-bold text-yellow-orange mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="services" smooth={true} duration={500} className="text-white/80 hover:text-yellow-orange transition-colors cursor-pointer">
+                <RouterLink to="/services" className="text-white/80 hover:text-yellow-orange transition-colors">
                   Our Services
-                </Link>
+                </RouterLink>
               </li>
               <li>
                 <RouterLink to="/services/irs-audit-defense" className="text-white/80 hover:text-yellow-orange transition-colors">
@@ -122,7 +122,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex">
                 <Phone size={18} className="text-dark-orange mr-3 flex-shrink-0" />
-                <span className="text-white/80">(714) 555-1234</span>
+                <span className="text-white/80">(714) 555-5555</span>
               </li>
               <li className="flex">
                 <Mail size={18} className="text-dark-orange mr-3 flex-shrink-0" />
@@ -131,7 +131,7 @@ export default function Footer() {
               <li className="flex">
                 <MapPin size={18} className="text-dark-orange mr-3 flex-shrink-0" />
                 <span className="text-white/80">
-                  1234 Main Street, Suite 500<br />
+                  555 Fake Street<br />
                   Newport Beach, CA 92660
                 </span>
               </li>

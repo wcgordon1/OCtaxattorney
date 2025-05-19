@@ -21,7 +21,7 @@ export default function Contact() {
                   <Phone className="text-dark-orange mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-dark-brown">Phone</h4>
-                    <p className="text-dark-brown/80">(714) 555-1234</p>
+                    <p className="text-dark-brown/80">(714) 555-5555</p>
                   </div>
                 </div>
                 
@@ -38,7 +38,7 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-dark-brown">Office</h4>
                     <p className="text-dark-brown/80">
-                      1234 Main Street, Suite 500<br />
+                      555 Fake Street<br />
                       Newport Beach, CA 92660
                     </p>
                   </div>
@@ -70,7 +70,7 @@ export default function Contact() {
           
           <div className="lg:w-1/2">
             <form className="bg-white p-8 rounded-lg shadow-md border border-yellow-orange/20">
-              <h3 className="text-2xl font-serif font-bold text-dark-brown mb-6">Free Consultation Request</h3>
+              <h3 className="text-2xl font-serif font-bold text-dark-brown mb-6">**NOT A REAL FORM</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
@@ -143,11 +143,11 @@ export default function Contact() {
               </div>
               
               <button type="submit" className="btn-primary w-full">
-                Request Free Consultation
+                Not a Real Form
               </button>
               
               <p className="text-dark-brown/60 text-sm mt-4 text-center">
-                Your information is confidential and protected by attorney-client privilege.
+                This form does not work. We do not save your information nor send it anywhere. Your information is confidential because it doesn't work.
               </p>
             </form>
           </div>

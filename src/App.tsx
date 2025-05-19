@@ -61,7 +61,8 @@ export function App() {
         <Route path="/locations" element={<LocationsHub />} />
         <Route path="/locations/:locationId" element={<LocationPage />} />
         
-        {/* Service Pages */}
+        {/* Services Routes */}
+        <Route path="/services" element={<Services />} />
         <Route path="/services/irs-audit-defense" element={<IRSAuditDefense />} />
         <Route path="/services/tax-debt-resolution" element={<TaxDebtResolution />} />
         <Route path="/services/tax-lien-levy" element={<TaxLienLevy />} />
