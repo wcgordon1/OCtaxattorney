@@ -20,7 +20,7 @@ const NavLink = ({ to, label, onClick = () => {} }: { to: string; label: string;
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   
   // Adjust body padding for banner
   useEffect(() => {
@@ -30,16 +30,17 @@ export default function Navbar() {
     };
   }, []);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const closeMenu = () => setIsMenuOpen(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 60) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -60,7 +61,7 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="fixed w-full z-50 bg-white shadow-md py-2" style={{ top: '0' }}>
+    <nav className={`fixed w-full z-50 bg-white shadow-md transition-all duration-300`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}

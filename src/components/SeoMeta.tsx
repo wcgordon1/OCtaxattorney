@@ -1,5 +1,4 @@
-import { Helmet } from 'react-helmet';
-import { helmetJsonLdProp } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import { BreadcrumbList, WithContext } from 'schema-dts';
 
 interface SeoMetaProps {
@@ -9,7 +8,7 @@ interface SeoMetaProps {
   canonicalUrl?: string;
   ogImage?: string;
   breadcrumbs?: Array<{name: string; item: string}>;
-  schemaData?: WithContext<any>;
+  schemaData?: any;
 }
 
 export default function SeoMeta({

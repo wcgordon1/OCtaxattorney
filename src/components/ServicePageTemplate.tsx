@@ -1,8 +1,7 @@
-import { Check, ChevronRight, Mail, MapPin, Phone, Users } from 'lucide-react';
+import { Check, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import Navbar from './Navbar';
-import SeoMeta from './SeoMeta';
 import { useEffect } from 'react';
 import DisclaimerBanner from './DisclaimerBanner';
 
@@ -133,7 +132,7 @@ export default function ServicePageTemplate({
                 
                 <div className="bg-dark-brown/5 p-4 rounded-md">
                   <h4 className="font-medium text-dark-brown mb-2 flex items-center">
-                    <Users size={18} className="text-dark-orange mr-2" />
+                    <CheckCircle2 size={18} className="text-dark-orange mr-2" />
                     Service Areas
                   </h4>
                   <p className="text-dark-brown/70 text-sm">

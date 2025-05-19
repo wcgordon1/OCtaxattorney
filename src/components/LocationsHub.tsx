@@ -14,12 +14,6 @@ export default function LocationsHub() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Function to navigate and scroll to top
-  const navigateToLocation = (locationId: string) => {
-    navigate(`/locations/${locationId}`);
-    window.scrollTo(0, 0);
-  };
-
   return (
     <div className="font-sans text-dark-brown">
       <Navbar />

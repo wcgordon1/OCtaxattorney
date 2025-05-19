@@ -1,11 +1,11 @@
-import { Briefcase, Building, ChevronRight, DollarSign, MapPin, Users } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { LocationData, locationData, serviceData } from '../data/locationData';
-import ServiceSection from './ServiceSection';
+import { locationData, serviceData } from '../data/locationData';
 import Footer from './Footer';
 import DisclaimerBanner from './DisclaimerBanner';
 import SeoMeta from './SeoMeta';
 import { useEffect } from 'react';
+import Navbar from './Navbar';
 
 export default function LocationPage() {
   const { locationId } = useParams<{ locationId: string }>();
@@ -81,22 +81,7 @@ export default function LocationPage() {
         />
       )}
       {/* Custom Navbar for Location Pages */}
-      <nav className="fixed w-full z-50 bg-white shadow-md py-2">
-        <DisclaimerBanner />
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
-            <button onClick={() => navigate('/')} className="text-dark-brown font-serif font-bold text-xl md:text-2xl">
-              <span className="text-dark-orange">Orange County</span> Tax Attorney
-            </button>
-            <button 
-              onClick={() => navigate('/')}
-              className="btn-secondary"
-            >
-              Back to Home
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 relative" style={{
@@ -126,7 +111,6 @@ export default function LocationPage() {
                 </div>
                 
                 <div className="flex items-start">
-                  <Users className="text-dark-orange mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-dark-brown">Population</h3>
                     <p className="text-dark-brown/80">{location.population}</p>
@@ -134,7 +118,6 @@ export default function LocationPage() {
                 </div>
                 
                 <div className="flex items-start">
-                  <DollarSign className="text-dark-orange mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-dark-brown">Median Income</h3>
                     <p className="text-dark-brown/80">{location.medianIncome}</p>
@@ -142,7 +125,6 @@ export default function LocationPage() {
                 </div>
                 
                 <div className="flex items-start">
-                  <Building className="text-dark-orange mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-dark-brown">Key Industries</h3>
                     <p className="text-dark-brown/80">{location.keyIndustries.join(", ")}</p>
