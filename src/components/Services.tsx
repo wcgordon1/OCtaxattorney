@@ -1,7 +1,5 @@
 import { ArrowRight, Briefcase, CheckCircle, ChevronRight, FileText, Gavel, Scale, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
-import Footer from './Footer';
 import { Helmet } from 'react-helmet';
 import { useEffect } from 'react';
 
@@ -105,8 +103,6 @@ export default function Services() {
         <meta name="description" content="Comprehensive tax services for Orange County residents and businesses, including IRS audit defense, tax debt resolution, and tax planning." />
       </Helmet>
 
-      <Navbar />
-      
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-cream relative overflow-hidden">
         <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-dark-orange/10 rounded-full blur-3xl" />
@@ -241,8 +237,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-      
-      <Footer />
     </div>
   );
 }

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './index.css';
 import Navbar from './components/Navbar';
-import DisclaimerBanner from './components/DisclaimerBanner';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
@@ -41,45 +40,44 @@ export function App() {
   return (
     <HelmetProvider>
       <Router>
-      <Routes>
-        <Route path="/" element={
-          <>
-            <header style={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 50 }}>
-              <Navbar />
-              <DisclaimerBanner />
-            </header>
-            <div style={{ height: '112px' }} />
-            <div className="font-sans text-dark-brown">
-              <Hero />
-              <Services />
-              <LocationLinks />
-              <About />
-              <Process />
-              <Benefits />
-              <Testimonials />
-              <FAQ />
-              <Contact />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <header style={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 50 }}>
+                <Navbar />
+              </header>
+              <div style={{ height: '112px' }} />
+              <div className="font-sans text-dark-brown">
+                <Hero />
+                <Services />
+                <LocationLinks />
+                <About />
+                <Process />
+                <Benefits />
+                <Testimonials />
+                <FAQ />
+                <Contact />
+              </div>
               <Footer />
-            </div>
-          </>
-        } />
-        <Route path="/locations" element={<LocationsHub />} />
-        <Route path="/locations/:locationId" element={<LocationPage />} />
-        
-        {/* Services Routes */}
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/irs-audit-defense" element={<IRSAuditDefense />} />
-        <Route path="/services/tax-debt-resolution" element={<TaxDebtResolution />} />
-        <Route path="/services/tax-lien-levy" element={<TaxLienLevy />} />
-        <Route path="/services/business-tax" element={<BusinessTax />} />
-        <Route path="/services/tax-planning" element={<TaxPlanning />} />
-        <Route path="/services/tax-court" element={<TaxCourt />} />
-        
-        {/* Blog Routes */}
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
-      </Routes>
-    </Router>
+            </>
+          } />
+          <Route path="/locations" element={<LocationsHub />} />
+          <Route path="/locations/:locationId" element={<LocationPage />} />
+          
+          {/* Services Routes */}
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/irs-audit-defense" element={<IRSAuditDefense />} />
+          <Route path="/services/tax-debt-resolution" element={<TaxDebtResolution />} />
+          <Route path="/services/tax-lien-levy" element={<TaxLienLevy />} />
+          <Route path="/services/business-tax" element={<BusinessTax />} />
+          <Route path="/services/tax-planning" element={<TaxPlanning />} />
+          <Route path="/services/tax-court" element={<TaxCourt />} />
+          
+          {/* Blog Routes */}
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+        </Routes>
+      </Router>
     </HelmetProvider>
   );
 }

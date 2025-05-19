@@ -126,7 +126,7 @@ export default function Footer() {
               </li>
               <li className="flex">
                 <Mail size={18} className="text-dark-orange mr-3 flex-shrink-0" />
-                <span className="text-white/80">info@orangecountytaxattorney.com</span>
+                <span className="text-white/80">sales@orangecountytaxattorney.com</span>
               </li>
               <li className="flex">
                 <MapPin size={18} className="text-dark-orange mr-3 flex-shrink-0" />

@@ -42,7 +42,7 @@ export default function SeoMeta({
     "logo": "https://mocha-cdn.com/og.png",
     "image": ogImage,
     "telephone": "(714) 555-1234",
-    "email": "info@orangecountytaxattorney.com",
+    "email": "sales@orangecountytaxattorney.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "1234 Main Street, Suite 500",

@@ -29,7 +29,7 @@ export default function Contact() {
                   <Mail className="text-dark-orange mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-dark-brown">Email</h4>
-                    <p className="text-dark-brown/80">info@orangecountytaxattorney.com</p>
+                    <p className="text-dark-brown/80">sales@orangecountytaxattorney.com</p>
                   </div>
                 </div>
                 
